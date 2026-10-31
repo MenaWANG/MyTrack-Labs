@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+title: Privacy
+section: privacy
+description: Find platform-specific privacy policies for MyTrack Labs apps and information about this website.
+---
+{% from 'macros/app-icon.njk' import appIcon %}
+<section class="page-header shell"><p class="eyebrow">PRIVACY</p><h1>Privacy<br>policies.</h1><p class="page-lead">Read the policy for your app and platform.</p></section>
+<section class="directory shell" aria-label="App privacy policies">{% for app in apps %}{% for platform in app.platforms %}{% for policy in platform.privacyPolicies %}<a class="directory-row" href="{{ policy.url }}"><div class="directory-app">{{ appIcon(app, 'directory-icon') }}<div><h2>{{ app.name }}</h2><p>{{ platform.name }}</p></div></div><span>Privacy policy <span aria-hidden="true">↗</span></span></a>{% endfor %}{% endfor %}{% endfor %}</section>
+<section class="website-privacy shell prose"><h2>This website</h2><p>This website does not use analytics or tracking cookies added by MyTrack Labs. It is hosted on GitHub Pages. GitHub logs visitors’ IP addresses for security purposes; see <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pages data collection</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub Privacy Statement</a>.</p><p>If you email us, we receive the email address and information you choose to include and use it to respond. Contact <a href="mailto:{{ studio.email }}">{{ studio.email }}</a> with privacy questions.</p></section>

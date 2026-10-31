@@ -1,0 +1,1 @@
+{% macro appIcon(app, variant='') %}{% if app.icon %}<img class="app-icon {{ variant }}" src="{{ app.icon }}" width="76" height="76" alt="">{% else %}<span class="app-icon app-monogram {{ variant }}" aria-hidden="true">{{ app.initials }}</span>{% endif %}{% endmacro %}

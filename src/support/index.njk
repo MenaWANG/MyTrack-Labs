@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+title: Support
+section: support
+description: Find support for your MyTrack Labs app.
+---
+{% from 'macros/app-icon.njk' import appIcon %}
+<section class="page-header shell"><p class="eyebrow">SUPPORT</p><h1>Support<br>for your app.</h1><p class="page-lead">Choose your app for contact details and support information.</p></section>
+<section class="directory shell" aria-label="App support">{% for app in apps %}<a class="directory-row" href="/apps/{{ app.slug }}/support/"><div class="directory-app">{{ appIcon(app, 'directory-icon') }}<div><h2>{{ app.name }}</h2><p>{% for platform in app.platforms %}{{ platform.name }}{% if not loop.last %} · {% endif %}{% endfor %}</p></div></div><span>App support <span aria-hidden="true">↗</span></span></a>{% endfor %}</section>
+<section class="support-contact shell"><h2>Something else?</h2><a class="text-link" href="mailto:{{ studio.email }}">{{ studio.email }} <span aria-hidden="true">↗</span></a></section>

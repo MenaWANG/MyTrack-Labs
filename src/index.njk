@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+title: MyTrack Labs
+description: Helping you remember what matters to you. Explore MyTrack Labs apps for food journals, pathology results and more.
+---
+{% from 'macros/app-icon.njk' import appIcon %}
+<section class="hero shell">
+  <p class="eyebrow">MYTRACK LABS</p>
+  <h1>Helping you remember<br><em>what matters to you.</em></h1>
+  <div class="hero-bottom"><p>From everyday meals to pathology results, <br>keep the things you want to remember together.</p><a class="text-link" href="#apps">Explore our apps <span aria-hidden="true">↘</span></a></div>
+</section>
+<section class="apps-section shell" id="apps" aria-labelledby="apps-heading">
+  <div class="section-head"><h2 id="apps-heading">Our apps</h2><p>A growing collection.</p></div>
+  <div class="app-grid">
+  {% for app in apps %}
+    <article class="app-card">
+      <div class="app-card-copy"><div class="app-identity">{{ appIcon(app) }}<div>{% if app.category %}<p class="status">{{ app.category }}</p>{% endif %}<h3><a href="/apps/{{ app.slug }}/">{{ app.name }}</a></h3></div></div><p class="app-summary">{{ app.summary }}</p><ul class="platform-list" aria-label="{{ app.name }} platforms">{% for platform in app.platforms %}<li><span>{{ platform.name }}</span><span class="availability{% if platform.status == 'Available' %} available{% endif %}">{{ platform.status }}</span></li>{% endfor %}</ul><div class="app-card-links"><a class="pill-link" href="/apps/{{ app.slug }}/">Explore {{ app.name }} <span aria-hidden="true">↗</span></a>{% for platform in app.platforms %}{% for link in platform.storeLinks %}<a class="quiet-link" href="{{ link.url }}">{{ platform.name }} download <span aria-hidden="true">↗</span></a>{% endfor %}{% endfor %}</div></div>
+      {% if apps.length == 1 and app.preview %}<div class="app-card-preview"><img src="{{ app.preview }}" alt="{{ app.previewAlt }}" width="342" height="554" loading="lazy"></div>{% endif %}
+    </article>
+  {% endfor %}
+  </div>
+</section>
+<section class="contact-section shell"><div><p class="eyebrow">HELLO, FROM MYTRACK LABS</p><h2>A question or an idea?</h2></div><a class="text-link" href="mailto:{{ studio.email }}">{{ studio.email }} <span aria-hidden="true">↗</span></a></section>

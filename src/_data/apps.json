@@ -1,0 +1,126 @@
+[
+  {
+    "slug": "myplatetrack",
+    "name": "MyPlateTrack",
+    "summary": "Log your meals, explore food variety and plan your next grocery shop.",
+    "supportEmail": "MyTrackLabs@gmail.com",
+    "icon": "/assets/apps/myplatetrack/icon.png",
+    "preview": "/assets/apps/myplatetrack/journal.png",
+    "previewAlt": "A saved MyPlateTrack lunch with foods grouped by category",
+    "category": "Food journal",
+    "platforms": [
+      {
+        "id": "android",
+        "name": "Android",
+        "status": "In development",
+        "packageName": "com.mytracklabs.myplatetrack",
+        "storeLinks": [],
+        "privacyPolicies": [
+          {
+            "label": "Android privacy policy",
+            "url": "/apps/myplatetrack/privacy/",
+            "file": "myplatetrack.md"
+          }
+        ],
+        "features": [
+          {
+            "title": "Your everyday plate",
+            "text": "Keep a simple record of the foods you eat, by meal."
+          },
+          {
+            "title": "Your Boost foods",
+            "text": "Choose foods you would like to eat more of, with source-linked food tips."
+          },
+          {
+            "title": "A bigger picture",
+            "text": "Explore your food variety and Boost frequency over time."
+          },
+          {
+            "title": "Your next shop",
+            "text": "Plan your groceries, then check off the list as you shop."
+          }
+        ],
+        "screenshots": [
+          {
+            "src": "/assets/apps/myplatetrack/journal.png",
+            "alt": "A saved lunch with foods recorded across food groups",
+            "caption": "Your food journal"
+          },
+          {
+            "src": "/assets/apps/myplatetrack/research.png",
+            "alt": "Chickpeas selected with a source-linked food tip",
+            "caption": "Food and research"
+          },
+          {
+            "src": "/assets/apps/myplatetrack/grocery.png",
+            "alt": "A saved grocery list grouped by aisle",
+            "caption": "Your next shop"
+          }
+        ],
+        "artworkCredit": {
+          "creator": "Michael Bollin / Food Icon Pack",
+          "source": "https://foodiconpack.com",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+          "changes": "Colour presentation adapted."
+        },
+        "notice": "MyPlateTrack provides general food information, not medical advice. It does not diagnose, treat, cure or prevent medical conditions."
+      }
+    ]
+  },
+  {
+    "slug": "mypathotrack",
+    "name": "MyPathoTrack",
+    "category": "Pathology results",
+    "summary": "Keep pathology results together, follow changes over time and remember planned tests.",
+    "initials": "MP",
+    "supportEmail": "MyTrackLabs@gmail.com",
+    "platforms": [
+      {
+        "id": "windows",
+        "name": "Windows",
+        "status": "Available",
+        "storeLinks": [
+          {
+            "label": "Get it from Microsoft Store",
+            "url": "https://apps.microsoft.com/detail/9n6l9zjl2kzq"
+          }
+        ],
+        "privacyPolicies": [
+          {
+            "label": "Windows privacy policy",
+            "url": "/apps/mypathotrack/privacy/windows/",
+            "file": "mypathotrack-windows.md"
+          }
+        ],
+        "features": [
+          {
+            "title": "Your results, together",
+            "text": "Keep pathology results and notes in one place."
+          },
+          {
+            "title": "Changes over time",
+            "text": "Follow markers across dates with trend charts."
+          },
+          {
+            "title": "Household profiles",
+            "text": "Keep separate records and settings for each person."
+          },
+          {
+            "title": "Planned tests",
+            "text": "See tests that are due soon or overdue based on the intervals you set."
+          }
+        ],
+        "notice": "MyPathoTrack helps organise information; it does not diagnose, prescribe, provide universal target ranges or decide how often you should be tested. Your laboratory reports and clinicians remain the sources of clinical meaning."
+      },
+      {
+        "id": "android",
+        "name": "Android",
+        "status": "Planned",
+        "storeLinks": [],
+        "privacyPolicies": []
+      }
+    ],
+    "icon": "/assets/apps/mypathotrack/icon.png"
+  }
+]

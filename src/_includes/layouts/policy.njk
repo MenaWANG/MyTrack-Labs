@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+section: privacy
+---
+{% set policyApp = apps | findApp(appSlug) %}
+{% set scopedPlatforms = policyApp.platforms | policyPlatforms(platformIds) %}
+<article class="document shell">
+  <a class="back-link" href="/privacy/">← Privacy policies</a>
+  <p class="eyebrow">{{ policyApp.name }} · {% for platform in scopedPlatforms %}{{ platform.name }}{% if not loop.last %} / {% endif %}{% endfor %}</p>
+  <h1>{{ title }}</h1>
+  <p class="document-meta">{% if updated %}Last updated {{ updated | readableDate }}{% else %}Effective date {{ effective | readableDate }}{% endif %}{% for platform in scopedPlatforms %}{% if platform.packageName %}<br><span class="package-name">{{ platform.name }} · {{ platform.packageName }}</span>{% endif %}{% endfor %}</p>
+  <div class="prose">{{ content | safe }}</div>
+  <div class="document-end"><a href="/apps/{{ policyApp.slug }}/">About {{ policyApp.name }}</a><a href="/apps/{{ policyApp.slug }}/support/">App support</a></div>
+</article>

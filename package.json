@@ -1,0 +1,16 @@
+{
+  "name": "mytrack-labs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve --port=4180"
+  },
+  "engines": {
+    "node": ">=22.22.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.7"
+  }
+}

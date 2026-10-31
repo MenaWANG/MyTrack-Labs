@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ description or studio.description | escape }}">
+  <meta name="theme-color" content="#f6f5ef">
+  <title>{{ title | escape }}{% if title != studio.name %} · {{ studio.name }}{% endif %}</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="wordmark" href="/" aria-label="MyTrack Labs home">MyTrack <span>Labs</span><i aria-hidden="true"></i></a>
+    <nav aria-label="Main navigation">
+      <a href="/#apps">Apps</a><a href="/privacy/"{% if section == 'privacy' %} aria-current="location"{% endif %}>Privacy</a><a href="/support/"{% if section == 'support' %} aria-current="location"{% endif %}>Support</a>
+    </nav>
+  </header>
+  <main id="main">{{ content | safe }}</main>
+  <footer class="site-footer shell">
+    <div><a class="footer-brand" href="/">MyTrack Labs</a><p>{{ studio.mission }}</p></div>
+    <div class="footer-links"><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/support/">Support</a><a href="mailto:{{ studio.email }}">{{ studio.email }}</a></div>
+    <p class="copyright">© {{ year }} MyTrack Labs</p>
+  </footer>
+</body>
+</html>

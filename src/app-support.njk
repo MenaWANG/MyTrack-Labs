@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+section: support
+pagination:
+  data: apps
+  size: 1
+  alias: app
+permalink: "/apps/{{ app.slug }}/support/"
+eleventyComputed:
+  title: "{{ app.name }} support"
+---
+<article class="document shell"><a class="back-link" href="/support/">← All app support</a><p class="eyebrow">{{ app.name }}</p><h1>How can we help?</h1><p class="page-lead">Email <a href="mailto:{{ app.supportEmail }}?subject={{ app.name | urlencode }}%20support">{{ app.supportEmail }}</a></p><div class="prose"><p>Tell us which platform, app version and device you’re using, what happened, and what you expected. A screenshot can help if you’re comfortable sharing it.</p><p>Please keep private records and backup files out of your first message. We’ll ask if anything else is needed.</p><h2>Platforms and privacy</h2>{% for platform in app.platforms %}<h3>{{ platform.name }} · {{ platform.status }}</h3>{% if platform.supportEmail %}<p><a href="mailto:{{ platform.supportEmail }}">{{ platform.supportEmail }}</a></p>{% endif %}{% for policy in platform.privacyPolicies %}<p><a href="{{ policy.url }}">{{ policy.label }}</a></p>{% endfor %}{% endfor %}</div><div class="document-end"><a href="/apps/{{ app.slug }}/">About {{ app.name }}</a></div></article>

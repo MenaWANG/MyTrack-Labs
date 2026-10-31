@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: apps
+  size: 1
+  alias: app
+permalink: "/apps/{{ app.slug }}/"
+eleventyComputed:
+  title: "{{ app.name }}"
+  description: "{{ app.summary }}"
+---
+{% from 'macros/app-icon.njk' import appIcon %}
+<section class="app-hero shell">
+  <a class="back-link" href="/#apps">← All apps</a>
+  <div class="app-hero-heading">{{ appIcon(app, 'large') }}<div><p class="eyebrow">{{ app.category or 'MYTRACK LABS' }}</p><h1>{{ app.name }}</h1></div></div>
+  <p class="page-lead">{{ app.summary }}</p>
+  <div class="link-row"><a class="quiet-link" href="/apps/{{ app.slug }}/support/">App support</a>{% for platform in app.platforms %}<a class="quiet-link" href="#{{ platform.id }}">{{ platform.name }}</a>{% endfor %}</div>
+</section>
+{% for platform in app.platforms %}
+<section class="platform-section shell" id="{{ platform.id }}" aria-labelledby="{{ platform.id }}-heading">
+  <div class="platform-heading"><h2 id="{{ platform.id }}-heading">{{ platform.name }}</h2><span class="availability{% if platform.status == 'Available' %} available{% endif %}">{{ platform.status }}</span></div>
+  {% if platform.storeLinks.length or platform.privacyPolicies.length %}<div class="link-row platform-links">{% for link in platform.storeLinks %}<a class="pill-link" href="{{ link.url }}">{{ link.label }} <span aria-hidden="true">↗</span></a>{% endfor %}{% for policy in platform.privacyPolicies %}<a class="quiet-link" href="{{ policy.url }}">{{ policy.label }}</a>{% endfor %}</div>{% endif %}
+  {% if platform.features %}<div class="feature-section"><div class="feature-grid">{% for feature in platform.features %}<div><h3>{{ feature.title }}</h3><p>{{ feature.text }}</p></div>{% endfor %}</div></div>{% endif %}
+  {% if platform.screenshots %}<div class="screens-section"><div class="screens-grid">{% for image in platform.screenshots %}<figure><div class="screen-holder"><img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy"></div><figcaption>{{ image.caption }}</figcaption></figure>{% endfor %}</div>{% if platform.artworkCredit %}<p class="art-credit">Artwork: <a href="{{ platform.artworkCredit.source }}">{{ platform.artworkCredit.creator }}</a>, <a href="{{ platform.artworkCredit.licenseUrl }}">{{ platform.artworkCredit.license }}</a>. {{ platform.artworkCredit.changes }}</p>{% endif %}</div>{% endif %}
+  {% if platform.notice %}<div class="app-note"><p>{{ platform.notice }}</p></div>{% endif %}
+</section>
+{% endfor %}
