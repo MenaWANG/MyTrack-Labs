@@ -4,7 +4,7 @@ title: MyPlateTrack Privacy Policy
 description: How MyPlateTrack handles your food journal, Boost foods, groceries and backups.
 appSlug: myplatetrack
 platformIds: [android]
-updated: "2026-10-31"
+updated: "2026-11-11"
 permalink: /apps/myplatetrack/privacy/
 ---
 
@@ -17,6 +17,12 @@ MyPlateTrack works without an account. The Android app stores your food journal 
 The app stores the foods you record, their meal slots and calendar dates, modification timestamps, your selected Boost food IDs, your current grocery list and checked states, and display preferences. Boost choices are food selections; browsing a health-interest group does not save a medical diagnosis or a personal health-condition profile. Grocery check-off does not create a purchase history or food-journal entry.
 
 The current Android app contains no advertising, analytics or remote crash-reporting SDK. It does not collect advertising identifiers, location, contacts, photos, microphone recordings or camera data, and does not connect to Health Connect or medical devices. Core assets and food-tip content are bundled for offline use. The app does not request Android's Internet permission.
+
+## Daily reminders
+
+Daily reminders are optional and off until you enable them. Your reminder time and preference are saved on your device, separately from your journal. Android handles notification permission and delivery. The app schedules these reminders locally without sending your information to a push server. A reminder contains a general prompt to log your foods, not your journal entries; its visibility on the lock screen depends on your Android settings.
+
+You can change the time or turn reminders off in **You**. Turning reminders off cancels the app's pending reminder and removes its displayed reminder notification. Reminder preferences and notification permissions are not included in journal exports or transferred by Restore backup; restoring a journal leaves this device's reminder preference unchanged.
 
 ## Backups you choose to export or restore
 
@@ -38,7 +44,7 @@ If you email MyTrack Labs for support, we receive the email address and informat
 
 MyPlateTrack retains local food history until you remove it, reset the journal, clear the app's storage or uninstall it. It does not automatically expire old meal records.
 
-You can use **You → Reset all local data** to clear the journal and app-generated backup cache files. Copies you previously saved or shared outside the app are not removed; delete those copies separately with the service or app holding them. Clearing storage or uninstalling can also remove your local journal, so export a backup first if you want to keep it.
+You can use **You → Reset all local data** to clear the journal and app-generated backup cache files, turn off the daily reminder and reset its time. Copies you previously saved or shared outside the app are not removed; delete those copies separately with the service or app holding them. Clearing storage or uninstalling can also remove your local journal, so export a backup first if you want to keep it.
 
 The app relies on Android's app storage protections and device security. It does not add its own database encryption or guarantee recovery after data loss. We cannot retrieve a journal that exists only on your device.
 
