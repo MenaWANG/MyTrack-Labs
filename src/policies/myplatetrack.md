@@ -1,10 +1,10 @@
 ---
 layout: layouts/policy.njk
 title: MyPlateTrack Privacy Policy
-description: How MyPlateTrack handles your food journal, Boost foods, groceries and backups.
+description: How MyPlateTrack handles your food journal, health goals, favorite recipes, groceries and backups.
 appSlug: myplatetrack
 platformIds: [android]
-updated: "2026-11-11"
+updated: "2026-11-19"
 permalink: /apps/myplatetrack/privacy/
 ---
 
@@ -14,7 +14,7 @@ MyPlateTrack is provided under the public developer name **MyTrack Labs**. Priva
 
 MyPlateTrack works without an account. The Android app stores your food journal in a local SQLite database within its app storage. MyTrack Labs does not operate a server that receives your journal and cannot access, recover or remotely delete it.
 
-The app stores the foods you record, their meal slots and calendar dates, modification timestamps, your selected Boost food IDs, your current grocery list and checked states, and display preferences. Boost choices are food selections; browsing a health-interest group does not save a medical diagnosis or a personal health-condition profile. Grocery check-off does not create a purchase history or food-journal entry.
+The app stores the foods you record, their meal slots and calendar dates, modification timestamps, your chosen health goals, favorite recipe IDs, your current grocery list and checked states, and display preferences. Health goals are the interests you choose for food suggestions. Boost foods are calculated from those goals and the app's current food tips. For journals from earlier versions, previous Boost choices are retained until you confirm your goals. Grocery check-off does not create a purchase history or food-journal entry.
 
 The current Android app contains no advertising, analytics or remote crash-reporting SDK. It does not collect advertising identifiers, location, contacts, photos, microphone recordings or camera data, and does not connect to Health Connect or medical devices. Core assets and food-tip content are bundled for offline use. The app does not request Android's Internet permission.
 
@@ -26,7 +26,7 @@ You can change the time or turn reminders off in **You**. Turning reminders off 
 
 ## Backups you choose to export or restore
 
-Export backup creates a JSON file containing your complete retained food history, current grocery list, Boost choices and settings. On Android, the app creates a copy in its cache and opens the system share sheet. You decide whether and where to save or share that file. MyTrack Labs does not automatically receive it.
+Export backup creates a JSON file containing your complete retained food history, current grocery list, health goals, favorite recipe IDs and journal settings. On Android, the app creates a copy in its cache and opens the system share sheet. You decide whether and where to save or share that file. MyTrack Labs does not automatically receive it.
 
 Backup files are plaintext, not password-protected or encrypted by MyPlateTrack. Keep them private. If you choose another app or cloud provider as the destination, that service handles the copy according to its own terms and privacy policy.
 
@@ -36,7 +36,7 @@ Automatic Android cloud backup and device-to-device transfer are disabled in thi
 
 ## External sources and support
 
-Food-tip citations open external websites when you choose to follow them. MyPlateTrack does not attach your journal or Boost selections to these links. The destination website or browser may process information such as your IP address under its own privacy practices.
+Food-tip citations and recipe sources open external websites when you choose to follow them. MyPlateTrack does not attach your journal, health goals, favorites or Boost choices to these links. The destination website or browser may process information such as your IP address under its own privacy practices.
 
 If you email MyTrack Labs for support, we receive the email address and information you choose to include and use it to respond to your request. Please do not send a private journal backup unless you specifically intend to disclose its contents. Email services process correspondence under their own privacy practices. There is no automatic in-app upload of support information or diagnostics.
 
